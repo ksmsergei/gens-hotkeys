@@ -1,4 +1,4 @@
-# Screenshoter
+# GENS HOTKEYS
 A configurable script that emulates key presses when using a joystick, created specifically for the GENS emulator.<br /><br />
 - By default, L1 does a quick save in GENS, and R2 does a quick load. The SELECT button takes a screenshot.<br />
 - The script can be used without GENS, for simple emulation of keys. To do this, set **GENS_MODE** to **False**<br />
