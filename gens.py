@@ -1,8 +1,9 @@
 ###OPTIONS###
 
-LOG_MODE = not False        #If True, print the names of connected devices and the names of pressed keys to the console
-EMULATE_MODE = not True     #If True, emulate key combinations when pressing certain buttons on the joystick (see EMULATE)
-GENS_MODE = not True        #If True, run GENS and terminate the script when closing GENS
+LOG_MODE = False        #If True, print the names of connected devices and the names of pressed keys to the console
+EMULATE_MODE = True     #If True, emulate key combinations when pressing certain buttons on the joystick (see EMULATE)
+GENS_MODE = True        #If True, run GENS and terminate the script when closing GENS
+GENS_PATH = "gens.exe"  #Path to GENS, needed only when GENS_MODE is True
 
 #On the left is a button on the joystick that calls the combination
 #On the right, any key combination separated by a + sign
@@ -62,7 +63,7 @@ def check_for_gens():
         
 #Try to run GENS and start a new thread
 if GENS_MODE:
-    Popen(['gens'])
+    Popen([GENS_PATH])
     Thread(target=check_for_gens).start()
     
 #Detect button presses, as well as new devices in loop
